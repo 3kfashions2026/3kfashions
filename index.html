@@ -7,51 +7,6 @@
   <meta name="keywords" content="fashion, accessories, men's apparel, women's apparel, shoes, curated, deals">
   <title>3K Fashions | Wear Your Style</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="search.css">
-  <style>
-.search-wrapper {
-  display: flex !important;
-  position: relative !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  width: 520px !important;
-  max-width: 90% !important;
-  height: auto !important;
-  min-height: 45px !important;
-  margin: 15px auto !important;
-  padding: 8px !important;
-  background: #f5f5f5 !important;
-  border: 2px solid #c69c3a !important;
-  z-index: 99999 !important;
-  box-sizing: border-box !important;
-  align-items: center !important;
-}
-
-#site-search {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  width: 100% !important;
-  height: 40px !important;
-  padding: 10px 45px 10px 15px !important;
-  border: 1px solid #ccc !important;
-  border-radius: 5px !important;
-  background: white !important;
-  color: #222 !important;
-  font-size: 16px !important;
-  box-sizing: border-box !important;
-}
-
-#clear-search {
-  display: block !important;
-  position: absolute !important;
-  right: 15px !important;
-  background: none !important;
-  border: none !important;
-  font-size: 22px !important;
-  cursor: pointer !important;
-}
-</style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -68,16 +23,6 @@
         <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
         <span class="logo-sub">WEAR YOUR STYLE</span>
       </a>
-    </div>
-
-    <!-- SEARCH -->
-    <div class="search-wrapper"
-      style="display:block !important; width:520px;
-      max-width:90%; margin:15px auto !important; padding:10px; background:#f5f5f5;
-      border:2px solid #c69c3a; z-index:9999;">
-      <input id="site-search" type="search" placeholder="Search products, categories..." aria-label="Search" autocomplete="off" />
-      <button id="clear-search" class="search-clear" aria-label="Clear search">&times;</button>
-      <div id="search-results" class="search-results" aria-live="polite"></div>
     </div>
 
     <nav class="nav-links" id="navLinks">
@@ -217,7 +162,6 @@
 
   <script src="products-data.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-  <script src="search.js"></script>
   <script src="contact.js"></script>
   <script src="script.js"></script>
 </body>
