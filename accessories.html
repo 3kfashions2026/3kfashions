@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessories | 3K Fashions</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <p>✨ Discover Curated Fashion & Accessories - Best Products, Best Prices</p>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        <span class="logo-sub">WEAR YOUR STYLE</span>
+      </a>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="mens.html">MEN</a>
+      <a href="womens.html">WOMEN</a>
+      <a href="accessories.html">ACCESSORIES</a>
+      <a href="shoes.html">SHOES</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <div class="mobile-toggle" id="mobileToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Accessories</h1>
+    <p>Discover the Best Accessories</p>
+  </section>
+
+  <!-- CATEGORY FILTER -->
+  <section class="filter-section">
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Watches">watches</button>
+      <button class="filter-btn" data-filter="spectales">Spectacles</button>
+      <button class="filter-btn" data-filter="chains">Chains</button>
+      <button class="filter-btn" data-filter="wallets">Wallets</button>
+      <button class="filter-btn" data-filter="belts">Belts</button>
+      
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+  <section class="products-section">
+    <div class="products-container">
+      <div class="product-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-logo">
+        <a href="index.html" class="brand-logo footer-brand">
+          <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="about.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="about.html">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <p><strong>Disclosure:</strong> 3K Fashions is a curated fashion affiliate platform. We earn commission at no extra cost to you when you purchase through our links.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3K Fashions. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const accessoriesProducts = [
+      {
+        id: 'a1',
+        category: 'wallets',
+        title: ' BMW Wallet for men',
+        price: '₹115',
+        originalprice: '200',
+        image: 'https://images.meesho.com/images/products/540889640/ivkzt_512.avif?width=512',
+        link: 'https://bitli.in/jhSMF01'
+      },
+      {
+        id: 'a2',
+        category: 'wallets',
+        title: 'Italia Tan Wallet Best Valentine Birthday gift',
+        price: '₹116',
+        image: 'https://images.meesho.com/images/products/398794289/8iaoz_512.avif?width=512',
+        link: 'https://bitli.in/v4pfXqN'
+      },
+      {
+        id: 'a3',
+        category: 'wallets',
+        title: 'Artificial Leather Wallet For Men with Flip Magnet Closure for Secure Cash & Cards I 1 Coin Pocket, 2 Currency Compartment, 2 Transparent ID Window ',
+        price: '₹178',
+        image: 'https://images.meesho.com/images/products/433072751/ac37p_512.avif?width=512',
+        link: 'https://bitli.in/6h3hdi0'
+      },
+      {
+        id: 'a4',
+        category: 'wallets',
+        title: 'ZEELAND UNIQUE STYLISH WALLETS FOR MEN',
+        price: '₹150',
+        image: 'https://images.meesho.com/images/products/475933715/fq2ez_512.avif?width=512',
+        link: 'https://bitli.in/WUefNae'
+      },
+      {
+        id: 'a5',
+        category: 'wallets',
+        title: 'rendy Wallet For Men Green Bi-Fold PU Two Fold Leather Purse',
+        price: '₹133',
+        image: 'https://images.meesho.com/images/products/362265456/nvgjd_512.avif?width=512',
+        link: 'https://bitli.in/7EzviFu'
+      },
+      {
+        id: 'a6',
+        category: 'chains',
+        title: 'Chain Locket For Men ',
+        price: '₹100',
+        image: 'https://images.meesho.com/images/products/440118795/sz1ch_512.avif?width=360',
+        link: 'https://bitli.in/t4rXfUN'
+      },
+      {
+      id: 'a7',
+        category: 'wallets',
+        title: 'Classic Artifical Leather Wallet',
+        price: '₹214',
+        image: 'https://images.meesho.com/images/products/1737834/1_512.avif?width=512',
+        link: 'https://www.meesho.com/classic-artifical-leather-wallet/p/118x6'
+    },
+      {
+          id: 'a8',
+        category: 'spectales',
+        title: 'Men Black Metal & Plastic Clubmaster , UV Protected Thug Life Sunglasses',
+        price: '181',
+        image: 'https://images.meesho.com/images/products/387262499/bcqsq_512.avif?width=512',
+        link: 'https://bitli.in/VZwl3gy'
+      }
+        
+    ];
+
+    function renderProducts(filter = 'all') {
+      const grid = document.getElementById('productsGrid');
+      grid.innerHTML = '';
+      
+      const filtered = filter === 'all' ? accessoriesProducts : accessoriesProducts.filter(p => p.category === filter);
+      
+      filtered.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+      
+          <div class="product-img-wrap">
+            <img src="${product.image}" alt="${product.title}" loading="lazy">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">${product.title}</h3>
+            <div class="price-container">
+              <span class="current-price">${product.price}</span>
+              <span class="original-price">${product.originalPrice}</span>
+            </div>
+            <a href="${product.link}" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy-now">BUY NOW</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts(btn.getAttribute('data-filter'));
+      });
+    });
+
+    // Mobile menu
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    // Initial render
+    renderProducts();
+  </script>
+
+</body>
+</html>

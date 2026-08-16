@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes | 3K Fashions</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <p>✨ Discover Curated Fashion & Accessories - Best Products, Best Prices</p>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        <span class="logo-sub">WEAR YOUR STYLE</span>
+      </a>
+    </div>
+
+    <div class="search-wrapper">
+      <input id="site-search" type="search" placeholder="Search products, categories..." aria-label="Search" autocomplete="off" />
+      <button id="clear-search" class="search-clear" aria-label="Clear search">&times;</button>
+      <div id="search-results" class="search-results" aria-live="polite"></div>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="mens.html">MEN</a>
+      <a href="womens.html">WOMEN</a>
+      <a href="accessories.html">ACCESSORIES</a>
+      <a href="shoes.html">SHOES</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <div class="mobile-toggle" id="mobileToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Footwear</h1>
+    <p>Discover the Best Shoes</p>
+  </section>
+
+  <!-- CATEGORY FILTER -->
+  <section class="filter-section">
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="sneakers">Sneakers</button>
+      <button class="filter-btn" data-filter="formal">Formal</button>
+      <button class="filter-btn" data-filter="casual">Casual</button>
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+  <section class="products-section">
+    <div class="products-container">
+      <div class="product-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-logo">
+        <a href="index.html" class="brand-logo footer-brand">
+          <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="about.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="about.html">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <p><strong>Disclosure:</strong> 3K Fashions is a curated fashion affiliate platform. We earn commission at no extra cost to you when you purchase through our links.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3K Fashions. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="products-data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="search.js"></script>
+
+  <script>
+    const shoesProducts = [
+      {
+        id: 's1',
+        category: 'sneakers',
+        title: 'White Canvas Sneakers',
+        price: '₹699',
+        originalPrice: '₹1,499',
+        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=500',
+        link: 'https://www.amazon.in/s?k=white+sneakers'
+      }
+    ];
+
+    function renderProducts(filter = 'all') {
+      const grid = document.getElementById('productsGrid');
+      grid.innerHTML = '';
+      
+      const filtered = filter === 'all' ? shoesProducts : shoesProducts.filter(p => p.category === filter);
+      
+      filtered.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+        <div class="badge-discount">${product.discount || ''}</div>
+          <div class="product-img-wrap">
+            <img src="${product.image}" alt="${product.title}" loading="lazy">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">${product.title}</h3>
+            <div class="price-container">
+              <span class="current-price">${product.price}</span>
+              <span class="original-price">${product.originalPrice}</span>
+            </div>
+            <a href="${product.link}" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy-now">BUY NOW</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts(btn.getAttribute('data-filter'));
+      });
+    });
+
+    // Mobile menu
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    // Initial render
+    renderProducts();
+  </script>
+
+</body>
+</html>

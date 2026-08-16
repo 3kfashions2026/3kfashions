@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="3K Fashions - Discover curated fashion & accessories from top retailers. Best products at best prices.">
+  <meta name="keywords" content="fashion, accessories, men's apparel, women's apparel, shoes, curated, deals">
+  <title>3K Fashions | Wear Your Style</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="search.css">
+  <style>
+.search-wrapper {
+  display: flex !important;
+  position: relative !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 520px !important;
+  max-width: 90% !important;
+  height: auto !important;
+  min-height: 45px !important;
+  margin: 15px auto !important;
+  padding: 8px !important;
+  background: #f5f5f5 !important;
+  border: 2px solid #c69c3a !important;
+  z-index: 99999 !important;
+  box-sizing: border-box !important;
+  align-items: center !important;
+}
+
+#site-search {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 40px !important;
+  padding: 10px 45px 10px 15px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 5px !important;
+  background: white !important;
+  color: #222 !important;
+  font-size: 16px !important;
+  box-sizing: border-box !important;
+}
+
+#clear-search {
+  display: block !important;
+  position: absolute !important;
+  right: 15px !important;
+  background: none !important;
+  border: none !important;
+  font-size: 22px !important;
+  cursor: pointer !important;
+}
+</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <p><marquee behavior="alternate">✨ Discover Curated Fashion & Accessories - Best Products, Best Prices</marquee></p>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        <span class="logo-sub">WEAR YOUR STYLE</span>
+      </a>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-wrapper"
+      style="display:block !important; width:520px;
+      max-width:90%; margin:15px auto !important; padding:10px; background:#f5f5f5;
+      border:2px solid #c69c3a; z-index:9999;">
+      <input id="site-search" type="search" placeholder="Search products, categories..." aria-label="Search" autocomplete="off" />
+      <button id="clear-search" class="search-clear" aria-label="Clear search">&times;</button>
+      <div id="search-results" class="search-results" aria-live="polite"></div>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="mens.html">MEN</a>
+      <a href="womens.html">WOMEN</a>
+      <a href="accessories.html">ACCESSORIES</a>
+      <a href="shoes.html">SHOES</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <div class="mobile-toggle" id="mobileToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <h1>Discover Your Signature Look</h1>
+      <p>Shop Curated Fashion & Accessories</p>
+      <a href="#categories" class="btn-primary">SHOP NOW</a>
+    </div>
+  </section>
+
+  <!-- CATEGORIES GRID -->
+  <section class="categories-section" id="categories">
+    <div class="category-grid">
+      
+      <div class="category-card">
+        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1516257967857-68ff4f2aa479?auto=format&fit=crop&q=80&w=500');"></div>
+        <div class="card-overlay">
+          <h3>MEN'S APPAREL</h3>
+          <p>Shirts, Jeans, Formal Wear & More</p>
+          <a href="mens.html" class="card-btn">Shop Men →</a>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?auto=format&fit=crop&q=80&w=500');"></div>
+        <div class="card-overlay">
+          <h3>WOMEN'S APPAREL</h3>
+          <p>Dresses, Tops, Ethnic Wear & More</p>
+          <a href="womens.html" class="card-btn">Shop Women →</a>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=500');"></div>
+        <div class="card-overlay">
+          <h3>ACCESSORIES</h3>
+          <p>Wallets, Belts, Chains & More</p>
+          <a href="accessories.html" class="card-btn">Shop Accessories →</a>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1565814636199-ae8133055c1c?auto=format&fit=crop&q=80&w=500');"></div>
+        <div class="card-overlay">
+          <h3>SHOES</h3>
+          <p>Sneakers, Formal, Casual & More</p>
+          <a href="shoes.html" class="card-btn">Shop Shoes →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT US / INFO SECTION -->
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" alt="3K Fashions Curated Studio">
+      </div>
+      <div class="about-content">
+        <span class="about-tag">OUR INFO</span>
+        <h2>ABOUT 3K FASHIONS - CURATING STYLE</h2>
+        <p>At 3K Fashions, we are your guide to refined style, curating the finest in men's and women's fashion and accessories. Our mission is to simplify the discovery of quality products from [...]
+        <p class="about-subtext">Discover why we are the go-to fashion affiliate for the modern individual.</p>
+        <a href="#contact" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <h2>GET IN TOUCH WITH US</h2>
+      <p>Have questions, business inquiries, or fashion recommendations? Drop us a message!</p>
+      <form class="contact-form" id="contactForm" data-endpoint="https://formspree.io/f/mvkpqyqa">
+        <div class="form-group">
+          <input id="name" name="name" type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input id="email" name="email" type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input id="subject" name="subject" type="text" placeholder="Subject (e.g., Product Suggestion)">
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">SEND MESSAGE</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/3kfashions2026/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-logo">
+        <a href="#" class="brand-logo footer-brand">
+          <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <span>|</span>
+        <a href="#terms">Terms of Service</a>
+      </div>
+    </div>
+
+    <!-- AFFILIATE LEGAL DISCLAIMER -->
+    <div class="footer-disclaimer">
+      <p><strong>Disclosure:</strong> 3K Fashions is a curated fashion affiliate platform. We provide product recommendations and affiliate links. When you purchase through our links, we earn a c[...]
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3K Fashions. All Rights Reserved. | GitHub Hosted</p>
+    </div>
+  </footer>
+
+  <script src="products-data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="search.js"></script>
+  <script src="contact.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

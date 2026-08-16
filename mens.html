@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Fashion | 3K Fashions</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <p>✨ Discover Curated Fashion & Accessories - Best Products, Best Prices</p>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        <span class="logo-sub">WEAR YOUR STYLE</span>
+      </a>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="mens.html">MEN</a>
+      <a href="womens.html">WOMEN</a>
+      <a href="accessories.html">ACCESSORIES</a>
+      <a href="shoes.html">SHOES</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Men's Fashion</h1>
+    <p>Discover the Best Men's Apparel</p>
+  </section>
+
+  <!-- CATEGORY FILTER -->
+  <section class="filter-section">
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="shirts">Shirts</button>
+      <button class="filter-btn" data-filter="jeans">Jeans</button>
+      <button class="filter-btn" data-filter="formal">Formal Wear</button>
+      <button class="filter-btn" data-filter="trackpants">Trackpants</button>
+      <button class="filter-btn" data-filter="tshirt">T-shirts</button>
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+  <section class="products-section">
+    <div class="products-container">
+      <div class="product-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/3kfashions2026/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-logo">
+        <a href="index.html" class="brand-logo footer-brand">
+          <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="about.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="about.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <p><strong>Disclosure:</strong> 3K Fashions is a curated fashion affiliate platform. We earn commission at no extra cost to you when you purchase through our links.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3K Fashions. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mensProducts = [
+      {
+        id: 'm1',
+        category: 'shirts',
+        title: 'THE Indian Garage CO Men Shirt',
+        price: '₹490',
+        originalPrice: '₹1749',
+        discount: '72%',
+        image: 'https://m.media-amazon.com/images/I/51BY8aczgWL._SX679_.jpg',
+        link: 'https://link.amazon/B0iMKzd14'
+      },
+      {
+        id: 'm2',
+        category: 'shirts',
+        title:'Men's Slim Fit Check Shirt',
+        price: '₹503',
+        originalPrice: '₹1799',
+        discount: '72%',
+        image: 'https://m.media-amazon.com/images/I/71JH8MetUAL._SY741_.jpg',
+        link: 'https://link.amazon/B09J8x5QT'
+      },
+      {
+        id: 'm3',
+        category: 'formal',
+        title: 'The Indian Garage Co Men Slim Fit Formal Shirt',
+        price: '₹546',
+        originalPrice: '₹1,949',
+        discount: '72%',
+        image: 'https://m.media-amazon.com/images/I/51ugxVoV5KL._SX679_.jpg',
+        link: 'https://link.amazon/B071UGum5'
+      },
+      {
+        id: 'm4',
+        category: 'jeans',
+        title: 'DENIM4MEN Men Straight Fit Mid Rise Grey Jeans',
+        price: '₹405',
+        originalPrice: '₹2,500',
+        discount: '83%',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jean/o/d/r/28-sm-a6-shimtec-original-imahg2gsususnhzk.jpeg?q=70',
+        link: 'https://fktr.in/lx7HOg2'
+      },
+      {
+        id: 'm5',
+        category: 'shirts',
+        title: 'THE Indian Garage CO Men Cotton Regular Fit Shirt',
+        price: '₹490',
+        originalPrice: '₹1,749',
+        discount: '72%',
+        image: 'https://m.media-amazon.com/images/I/61Edp4aV9tL._SX679_.jpg',
+        link: 'https://link.amazon/B06vRT2vd'
+      },
+      {
+        id: 'm6',
+        category: 'jeans',
+        title: ' Men Straight Fit Mid Rise Blue Jeans',
+        price: '₹632',
+        originalPrice: '₹2,199',
+        discount: '71%',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jean/b/o/p/-original-imah7trjvkey3rgf.jpeg?q=70',
+        link: 'https://fktr.in/snqlEu2'
+      },
+       {
+        id: 'm7',
+        category: 'jeans',
+        title: 'Men Regular Fit Blue Pure Cotton Trousers',
+        price: '₹692',
+        originalPrice: '₹2,299',
+        discount: '70%',
+        image: 'https://rukminim2.flixcart.com/image/1366/1366/xif0q/trouser/g/5/q/28-26966034-roadster-original-imah93fytnmrrdfm.jpeg?q=90',
+        link: 'https://fktr.in/tWc27Pd'
+      },
+       {
+        id: 'm8',
+        category: 'jeans',
+        title: 'Men Loose Fit Mid Rise Grey Jeans',
+        price: '₹390',
+        originalPrice: '₹2,999',
+        discount: '87%',
+        image: 'https://rukminim2.flixcart.com/image/1366/1366/xif0q/jean/f/c/a/-resized-original-imaheqkaeqbyknzh.jpeg?q=90',
+        link: 'https://fktr.in/P5Q0ler'
+      },
+       {
+        id: 'm9',
+        category: 'jeans',
+        title: 'Men Relaxed Fit Mid Rise Blue Jeans',
+        price: '₹527',
+        originalPrice: '₹1,999',
+        discount: '74%',
+        image: 'https://rukminim2.flixcart.com/image/1366/1366/xif0q/jean/o/p/s/28-dl-men-baggy-06-denim-look-original-imahfmbhffzzqyam.jpeg?q=90',
+        link: 'https://fktr.in/mmswNtv'
+      },
+       {
+        id: 'm10',
+        category: 'jeans',
+        title: 'Baggy Fit Jeans for Men',
+        price: '₹849',
+        originalPrice: '₹2,999',
+        discount: '72%',
+        image: 'https://m.media-amazon.com/images/I/71tq2wDUoRL._SY741_.jpg',
+        link: 'https://link.amazon/B058JL58b'
+      } 
+    ];
+
+    function renderProducts(filter = 'all') {
+      const grid = document.getElementById('productsGrid');
+      grid.innerHTML = '';
+
+      const filtered = filter === 'all' ? mensProducts : mensProducts.filter(p => p.category === filter);
+
+      filtered.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="badge-discount">${product.discount}</div>
+          <div class="product-img-wrap">
+            <img src="${product.image}" alt="${product.title}" loading="lazy">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">${product.title}</h3>
+            <div class="price-container">
+              <span class="current-price">${product.price}</span>
+              <span class="original-price">${product.originalPrice}</span>
+            </div>
+            <a href="${product.link}" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy-now">BUY NOW</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts(btn.getAttribute('data-filter'));
+      });
+    });
+
+    // Mobile menu
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    // Initial render
+    renderProducts();
+  </script>
+
+</body>
+</html>

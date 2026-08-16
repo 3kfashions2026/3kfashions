@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | 3K Fashions</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <p>✨ Discover Curated Fashion & Accessories - Best Products, Best Prices</p>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        <span class="logo-sub">WEAR YOUR STYLE</span>
+      </a>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="mens.html">MEN</a>
+      <a href="womens.html">WOMEN</a>
+      <a href="accessories.html">ACCESSORIES</a>
+      <a href="shoes.html">SHOES</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <div class="mobile-toggle" id="mobileToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <h1>Get In Touch</h1>
+      <p>Have questions, suggestions, or want to work with us? Drop us a message!</p>
+
+      <form class="contact-form" id="contactForm" data-endpoint="https://formspree.io/f/mvkpqyqa">
+        <div class="form-group">
+          <input id="name" name="name" type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input id="email" name="email" type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <select id="subject" name="subject">
+            <option value="">Select Subject</option>
+            <option value="product">Product Suggestion</option>
+            <option value="business">Business Inquiry</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">SEND MESSAGE</button>
+      </form>
+
+      <div style="margin-top: 40px; text-align: center; color: #666;">
+        <p>📧 Email: 3kfashions2026@gmail.com</p>
+        <p>📱 Instagram:@3kfashions2026</p>
+        <p style="margin-top: 20px; font-size: 0.9rem;">We typically respond within 24-48 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/3kfashions2026/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-logo">
+        <a href="index.html" class="brand-logo footer-brand">
+          <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="about.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="about.html">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <p><strong>Disclosure:</strong> 3K Fashions is a curated fashion affiliate platform. We earn commission at no extra cost to you when you purchase through our links.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3K Fashions. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+  </script>
+
+  <script src="contact.js"></script>
+
+</body>
+</html>

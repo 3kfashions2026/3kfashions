@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women's Fashion | 3K Fashions</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <p>✨ Discover Curated Fashion & Accessories - Best Products, Best Prices</p>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        <span class="logo-sub">WEAR YOUR STYLE</span>
+      </a>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="mens.html">MEN</a>
+      <a href="womens.html">WOMEN</a>
+      <a href="accessories.html">ACCESSORIES</a>
+      <a href="shoes.html">SHOES</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <div class="mobile-toggle" id="mobileToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Women's Fashion</h1>
+    <p>Discover the Best Women's Apparel</p>
+  </section>
+
+  <!-- CATEGORY FILTER -->
+  <section class="filter-section">
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="dresses">Dresses</button>
+      <button class="filter-btn" data-filter="tops">Tops</button>
+      <button class="filter-btn" data-filter="ethnic">Ethnic Wear</button>
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+  <section class="products-section">
+    <div class="products-container">
+      <div class="product-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/3kfashions2026/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-logo">
+        <a href="index.html" class="brand-logo footer-brand">
+          <span class="logo-number">3K</span><span class="logo-text">Fashions</span>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="about.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="about.html">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <p><strong>Disclosure:</strong> 3K Fashions is a curated fashion affiliate platform. We earn commission at no extra cost to you when you purchase through our links.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3K Fashions. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const womensProducts = [
+      {
+        id: 'w1',
+        category: 'dresses',
+        title: 'Floral Print Casual Dress',
+        price: '₹699',
+        originalPrice: '₹1,599',
+        image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=500',
+        link: 'https://www.myntra.com/search?rawQuery=womens+dress&utm_source=3kfashions'
+      },
+      {
+        id: 'w2',
+        category: 'dresses',
+        title: 'Black Elegant Party Dress',
+        price: '₹899',
+        originalPrice: '₹1,999',
+        image: 'https://images.unsplash.com/photo-1595868852054-d1efb27e15f2?auto=format&fit=crop&q=80&w=500',
+        link: 'https://www.flipkart.com/search?q=womens+black+dress'
+      },
+      {
+        id: 'w3',
+        category: 'tops',
+        title: 'Cotton Casual T-Shirt',
+        price: '₹349',
+        originalPrice: '₹899',
+        discount: '61%',
+        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=500',
+        link: 'https://www.amazon.in/s?k=womens+tshirt'
+      },
+      {
+        id: 'w4',
+        category: 'tops',
+        title: 'White Formal Blouse',
+        price: '₹499',
+        originalPrice: '₹1,299',
+        discount: '61%',
+        image: 'https://images.unsplash.com/photo-1596215877223-85ba647ed4d0?auto=format&fit=crop&q=80&w=500',
+        link: 'https://www.myntra.com/search?rawQuery=womens+blouse'
+      },
+      {
+        id: 'w5',
+        category: 'ethnic',
+        title: 'Beige Saree with Blouse',
+        price: '₹1,199',
+        originalPrice: '₹2,499',
+        discount: '53%',
+        image: 'https://images.unsplash.com/photo-1617126212335-c452533ba252?auto=format&fit=crop&q=80&w=500',
+        link: 'https://www.flipkart.com/search?q=saree'
+      },
+      {
+        id: 'w6',
+        category: 'ethnic',
+        title: 'Embroidered Kurti',
+        price: '₹699',
+        originalPrice: '₹1,499',
+        discount: '53%',
+        image: 'https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?auto=format&fit=crop&q=80&w=500',
+        link: 'https://www.amazon.in/s?k=kurti+womens'
+      }
+    ];
+
+    function renderProducts(filter = 'all') {
+      const grid = document.getElementById('productsGrid');
+      grid.innerHTML = '';
+      
+      const filtered = filter === 'all' ? womensProducts : womensProducts.filter(p => p.category === filter);
+      
+      filtered.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="badge-discount">${product.discount}</div>
+          <div class="product-img-wrap">
+            <img src="${product.image}" alt="${product.title}" loading="lazy">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">${product.title}</h3>
+            <div class="price-container">
+              <span class="current-price">${product.price}</span>
+              <span class="original-price">${product.originalPrice}</span>
+            </div>
+            <a href="${product.link}" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy-now">BUY NOW</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts(btn.getAttribute('data-filter'));
+      });
+    });
+
+    // Mobile menu
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    // Initial render
+    renderProducts();
+  </script>
+
+</body>
+</html>
